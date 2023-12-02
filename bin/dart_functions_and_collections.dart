@@ -1,4 +1,4 @@
-import 'package:dart_functions_and_collections/dart_functions_and_collections.dart';
+import '../lib/dart_functions_and_collections.dart';
 
 void main() {
   FunctionsAndCollections functionsAndCollections = FunctionsAndCollections();
@@ -12,4 +12,9 @@ void main() {
   print("The division is $div");
   double rest = functionsAndCollections.rest(15, 10);
   print("The rest is $rest");
+  String name = functionsAndCollections.getName();
+  print("The name is $name");
+  functionsAndCollections.functionEx(functionsAndCollections.anonymousFunction);
+  functionsAndCollections.functionTypeDef((String) {});
+  functionsAndCollections.list();
 }
