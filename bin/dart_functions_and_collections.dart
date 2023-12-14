@@ -17,4 +17,5 @@ void main() {
   functionsAndCollections.functionEx(functionsAndCollections.anonymousFunction);
   functionsAndCollections.functionTypeDef((String) {});
   functionsAndCollections.list();
+  functionsAndCollections.set();
 }

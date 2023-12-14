@@ -86,6 +86,27 @@ class FunctionsAndCollections {
     messyList.sort();
     print(messyList);
   }
+
+  // set
+
+  void set() {
+    //The set does not allow repeating information
+    var setNumbers = <int>{};
+
+    setNumbers.add(1);
+    setNumbers.add(1);
+    setNumbers.add(2);
+    setNumbers.add(2);
+    setNumbers.add(2);
+    setNumbers.add(3);
+
+    print(setNumbers);
+    var setNumbers2 = <int>{3, 4, 5, 2};
+    print(setNumbers.union(setNumbers2));
+    print(setNumbers.difference(setNumbers2));
+    print(setNumbers.intersection(setNumbers2));
+    print(setNumbers.lookup(2));
+  }
 }
 //typedef
 
