@@ -18,4 +18,6 @@ void main() {
   functionsAndCollections.functionTypeDef((String) {});
   functionsAndCollections.list();
   functionsAndCollections.set();
+  functionsAndCollections.mapFunction();
+  functionsAndCollections.exeptions();
 }

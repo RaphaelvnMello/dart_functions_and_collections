@@ -107,6 +107,75 @@ class FunctionsAndCollections {
     print(setNumbers.intersection(setNumbers2));
     print(setNumbers.lookup(2));
   }
+
+  void mapFunction() {
+    Map<String, String> studants = {"studant1": "math", "studant2": "science"};
+    print(studants);
+    final studantsEx2 = <String, String>{
+      "studant1": "math",
+      "studant2": "science"
+    };
+    print(studantsEx2);
+
+    //null safety
+    Map<String, String>? studantEx3 = null;
+    print(studantEx3);
+    Map<String?, String> studantEx4 = {null: "math"};
+    print(studantEx4);
+    Map<String, String?> studantEx5 = {"studant1": null};
+    print(studantEx5);
+
+    final products = <String, int>{};
+
+    products.putIfAbsent("desk", () => 3);
+    print(products);
+
+    products.update("desk", (value) => 2);
+    products.update(
+      "chair",
+      (value) => 2,
+      ifAbsent: () => 2,
+    );
+    print(products);
+
+    products.forEach((key, value) {
+      print("key: $key");
+      print("value: $value");
+    });
+
+    //async
+
+    for (var entry in products.entries) {
+      print("key: ${entry.key}");
+      print("value: ${entry.value}");
+    }
+
+    final newProducts =
+        products.map((key, value) => MapEntry(key.toUpperCase(), value));
+
+    print(newProducts);
+  }
+
+  void exeptions() {
+    try {
+      var age = "20 years";
+
+      int.parse(age);
+
+      print(age);
+    } on FormatException catch (error, s) {
+      print(error);
+      print(s);
+    } on TypeError catch (error, s) {
+      print(error);
+      print(s);
+    } catch (error, s) {
+      print(error);
+      print(s);
+    } finally {
+      print("Always printed");
+    }
+  }
 }
 //typedef
 
